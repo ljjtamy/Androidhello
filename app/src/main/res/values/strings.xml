@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">Androidhello</string>
+    <string name="app_name">Androidhello1</string>
+
+    <string name="teamA_label">TeamA</string>
+    <string name="teamB_label">TeamB</string>
+    <string name="btn3_label">+3 points</string>
+    <string name="btn2_label">+2 points</string>
+    <string name="btn1_label">FREE THROW</string>
+    <string name="reset_label">reset</string>
+
+    <string name="input_hint">Input RMB</string>
+    <string name="label_hello">Hello</string>
+    <string name="btn_dollar_label">dollar</string>
+    <string name="btn_euro_label">euro</string>
+    <string name="btn_won_label">won</string>
+    <string name="btn_config_label">config</string>
+    <string name="btn_save_label">save</string>
+
 </resources>

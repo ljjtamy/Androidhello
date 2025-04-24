@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.androidhello"
+    namespace = "com.example.androidhello1"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.androidhello"
+        applicationId = "com.example.androidhello1"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -37,6 +37,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation("org.jsoup:jsoup:1.19.1")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

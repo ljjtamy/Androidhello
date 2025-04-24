@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScoringActivity">
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="308dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/reset_label" />
+
+    <TextView
+        android:id="@+id/TeamA"
+        android:layout_width="76dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/teamA_label"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/TeamA_add1"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:onClick="click"
+        android:text="@string/btn1_label" />
+
+    <Button
+        android:id="@+id/TeamA_add2"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:onClick="click"
+        android:text="@string/btn2_label" />
+
+    <TextView
+        android:id="@+id/TeamA_score"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/TeamA_add3"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:onClick="click"
+        android:text="@string/btn3_label" />
+
+    <TextView
+        android:id="@+id/TeamB_score"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/TeamB_add3"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:onClick="click"
+        android:text="@string/btn3_label" />
+
+    <Button
+        android:id="@+id/TeamB_add2"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:onClick="click"
+        android:text="@string/btn2_label" />
+
+    <Button
+        android:id="@+id/TeamB_add1"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:onClick="click"
+        android:text="@string/btn1_label" />
+
+    <TextView
+        android:id="@+id/TeamB"
+        android:layout_width="76dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/teamB_label" />
+</LinearLayout>
