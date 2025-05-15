@@ -77,9 +77,11 @@ public class RMB_Activity extends AppCompatActivity implements Runnable {
             @Override
             public void handleMessage(@NonNull Message msg) {
                 if (msg.what == 7) {
-                    String str = (String) msg.obj;
-                    Log.i(TAG, "handleMessage: getMessage msq = " + str);
-                    tvResult.setText(str);
+                    Bundle bdl2 = (Bundle) msg.obj;
+                    dollarRate = bdl2.getFloat("web_dollar");
+                    euroRate = bdl2.getFloat("web_euro");
+                    wonRate = bdl2.getFloat("web_won");
+
                 }
                 super.handleMessage(msg);
             }
@@ -143,6 +145,8 @@ public class RMB_Activity extends AppCompatActivity implements Runnable {
     public void run() {
         Log.i(TAG, "run: running......");
 
+        Bundle retbdl = new Bundle();
+
 
         //获取网络数据
         URL url = null;
@@ -176,9 +180,16 @@ public class RMB_Activity extends AppCompatActivity implements Runnable {
                 String str2 = td2.text();
 
                 Log.i(TAG, "run: " + str1 + "==>" + str2);
+                float r = 100/Float.parseFloat(str2);
+                if("美元".equals((str1))){
+                    retbdl.putFloat("web_dollar",r);
+                } else if ("欧元".equals(str1)) {
+                    retbdl.putFloat("web_euro",r);
+                }else if ("韩国元".equals(str1)){
+                    retbdl.putFloat("web_won",r);
+                }
 
             }
-
 
 
         } catch (MalformedURLException e) {
@@ -189,8 +200,8 @@ public class RMB_Activity extends AppCompatActivity implements Runnable {
 
 
         //向主线程发送消息
-        Message msq = handler.obtainMessage(7);
-        msq.obj = "Hello from run";
+        Message msq = handler.obtainMessage(7,retbdl);
+        msq.obj = retbdl;
         handler.sendMessage(msq);
         Log.i(TAG, "run: 消息发送完毕");
     }
