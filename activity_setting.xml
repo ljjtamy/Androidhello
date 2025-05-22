@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".SettingActivity">
+
+    <EditText
+        android:id="@+id/dollar_rate"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:ems="10"
+        android:hint="0.14"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/euro_rate"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:ems="10"
+        android:hint="0.12"
+        android:inputType="numberDecimal"
+        android:paddingVertical="16dp" />
+
+    <EditText
+        android:id="@+id/won_rate"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="199.02"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_save_label"
+        android:layout_marginTop="16dp"
+        android:onClick="save"
+        android:textAllCaps="true"/>
+</LinearLayout>
